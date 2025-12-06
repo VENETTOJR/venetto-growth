@@ -16,7 +16,7 @@ const HeroSection = () => {
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background from-30% to-transparent" />
       </div>
       
       {/* Background effects */}
