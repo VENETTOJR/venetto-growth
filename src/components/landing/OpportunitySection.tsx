@@ -4,6 +4,9 @@ import venettoPhoto from "@/assets/venetto-photo.jpg";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 const OpportunitySection = () => {
   const handleApply = () => {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead');
+    }
     window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
   };
   const problems = ["Queima oferta todo mês e não tem previsibilidade", "Trabalha muito mas o lucro não acompanha", "Perde venda por objeção de golpe", "CPA alto demais, margem apertada", "Só bota dinheiro no bolso do cliente (gestor de tráfego)", "Depende de produtor pra ganhar (afiliado)"];

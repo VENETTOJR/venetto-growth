@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 const ObjectionSection = () => {
   const handleApply = () => {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead');
+    }
     window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
   };
   return <section className="py-12 sm:py-16 md:py-20 section-light">

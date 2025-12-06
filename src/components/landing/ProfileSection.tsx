@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, AlertTriangle, User, Briefcase, TrendingUp, Building, Users, Rocket } from "lucide-react";
 const ProfileSection = () => {
   const handleApply = () => {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead');
+    }
     window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
   };
   const profiles = [{
