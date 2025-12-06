@@ -21,7 +21,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-muted-foreground text-xs sm:text-sm">
-            © 2025 Mentoria FWA - VENETTO. Todos os direitos reservados.
+            © 2025 Sistema COD PRO - VENETTO. Todos os direitos reservados.
           </p>
 
           {/* Disclaimer */}
