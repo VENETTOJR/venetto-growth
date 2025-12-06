@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, X, Check } from "lucide-react";
+import venettoPhoto from "@/assets/venetto-photo.jpg";
 
 const OpportunitySection = () => {
   const scrollToForm = () => {
@@ -30,13 +31,12 @@ const OpportunitySection = () => {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Image placeholder */}
           <div className="relative order-2 md:order-1">
-            <div className="aspect-square max-w-sm mx-auto md:max-w-none bg-gradient-to-br from-slate-200 to-slate-300 rounded-2xl overflow-hidden shadow-2xl">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center p-6 sm:p-8">
-                  <div className="w-24 sm:w-32 h-24 sm:h-32 mx-auto bg-slate-400 rounded-full mb-4" />
-                  <span className="text-slate-500 text-base sm:text-lg font-medium">VENETTO</span>
-                </div>
-              </div>
+            <div className="aspect-square max-w-sm mx-auto md:max-w-none rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src={venettoPhoto} 
+                alt="VENETTO - Mentor" 
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Decorative elements */}
             <div className="absolute -bottom-4 -right-4 w-16 sm:w-24 h-16 sm:h-24 bg-primary/20 rounded-xl -z-10" />
