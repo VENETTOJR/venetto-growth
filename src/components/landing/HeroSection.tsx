@@ -26,7 +26,7 @@ const HeroSection = () => {
         {/* Headline */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-foreground mb-5 sm:mb-8 leading-tight animate-fade-up delay-100 px-2">
           Existe uma estrutura validada para vender produto físico com COD + Afterpay e lucrar de{" "}
-          <span className="highlight-orange">R$10.000 a R$90.000/mês</span> — e você pode começar a aplicar ainda hoje
+          <span className="highlight-orange">R$50.000 a R$300.000/mês</span> — e você pode começar a aplicar ainda hoje
         </h1>
 
         {/* Subheadline */}
