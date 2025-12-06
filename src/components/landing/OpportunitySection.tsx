@@ -67,7 +67,10 @@ const OpportunitySection = () => {
             </p>
 
             <Button variant="cta" size="xl" onClick={handleApply} className="group mt-4 w-full sm:w-auto text-sm sm:text-base md:text-lg px-6 sm:px-8">
-              QUERO ME APLICAR AGORA!
+              PARTICIPAR DA SELEÇÃO!
+
+ 
+
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>

@@ -1,14 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 import venettoHero from "@/assets/venetto-hero.jpg";
-
 const HeroSection = () => {
   const handleApply = () => {
     window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
   };
-  
-  return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden">
+  return <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* Clean gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-primary/10" />
 
@@ -37,7 +34,8 @@ const HeroSection = () => {
         {/* CTA Button */}
         <div className="animate-fade-up delay-300 mb-6 sm:mb-8">
           <Button variant="cta" size="xl" onClick={handleApply} className="group text-base sm:text-lg md:text-xl px-8 sm:px-12 shadow-2xl">
-            QUERO ME APLICAR AGORA!
+            PARTICIPAR DA SELEÇÃO!  
+
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
@@ -69,14 +67,9 @@ const HeroSection = () => {
       <div className="relative z-10 w-full mt-8">
         {/* Photo container - full width with zoom on face */}
         <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden">
-          <img 
-            src={venettoHero} 
-            alt="VENETTO - Mentor" 
-            className="absolute inset-0 w-full h-full object-cover scale-110"
-            style={{ objectPosition: '50% 20%' }}
-            loading="eager"
-            fetchPriority="high"
-          />
+          <img src={venettoHero} alt="VENETTO - Mentor" className="absolute inset-0 w-full h-full object-cover scale-110" style={{
+          objectPosition: '50% 20%'
+        }} loading="eager" fetchPriority="high" />
           
           {/* Top gradient fade */}
           <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-background to-transparent" />
@@ -89,8 +82,6 @@ const HeroSection = () => {
           <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background/50 to-transparent" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;

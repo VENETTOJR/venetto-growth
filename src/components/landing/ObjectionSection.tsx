@@ -33,7 +33,9 @@ const ObjectionSection = () => {
           {/* CTA */}
           <div className="text-center">
             <Button variant="cta" size="xl" onClick={handleApply} className="group w-full sm:w-auto text-sm sm:text-base">
-              QUERO ME APLICAR 
+              PARTICIPAR DA SELEÇÃO! 
+
+ 
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
