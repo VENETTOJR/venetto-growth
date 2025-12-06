@@ -6,8 +6,8 @@ const ResultsSection = () => {
   }));
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 section-dark">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-12 sm:py-16 md:py-20 section-dark">
+      <div className="w-[90%] max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 px-2">

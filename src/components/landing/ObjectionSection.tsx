@@ -7,8 +7,8 @@ const ObjectionSection = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 section-light">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-12 sm:py-16 md:py-20 section-light">
+      <div className="w-[90%] max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl p-5 sm:p-8 md:p-12 border border-slate-100">
           {/* Question headline */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">

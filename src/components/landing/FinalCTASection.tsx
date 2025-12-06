@@ -9,7 +9,7 @@ const FinalCTASection = () => {
   return (
     <section 
       id="apply-section"
-      className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 relative overflow-hidden"
+      className="py-16 sm:py-20 md:py-24 relative overflow-hidden"
       style={{
         background: "linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(221 83% 35%) 100%)",
       }}
@@ -20,7 +20,7 @@ const FinalCTASection = () => {
         <div className="absolute bottom-0 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-white/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <div className="relative z-10 w-[90%] max-w-4xl mx-auto text-center">
         {/* Icon */}
         <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-white/20 rounded-full mb-6 sm:mb-8 animate-float">
           <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-white" />

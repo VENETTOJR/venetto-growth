@@ -82,6 +82,10 @@
     background: var(--hero-gradient);
   }
 
+  .container-mobile {
+    @apply w-[90%] max-w-6xl mx-auto;
+  }
+
   .cta-button {
     background: var(--cta-gradient);
     @apply text-white font-bold px-8 py-4 rounded-lg shadow-xl;
