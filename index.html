@@ -10,7 +10,6 @@
       content="Descubra como estruturar operação lucrativa de nutraceuticos com COD + Afterpay no Brasil. Margem 60%+, cobrança profissional, operação validada."
     />
     <meta name="author" content="VENETTO" />
-    <meta name="theme-color" content="#0f1729" />
 
     <meta property="og:title" content="Sistema COD PRO - Estruture Operação de Nutra com COD + Afterpay | VENETTO" />
     <meta
@@ -28,12 +27,14 @@
     />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <!-- DNS Prefetch & Preconnect for external resources -->
+    <!-- DNS Prefetch & Preconnect for fonts -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-    <link rel="dns-prefetch" href="//connect.facebook.net" />
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="/src/assets/venetto-hero.jpg" fetchpriority="high" />
 
     <link rel="canonical" href="https://SistemaCODPRO.com.br" />
     
@@ -42,32 +43,24 @@
       /* Critical above-the-fold styles */
       *{margin:0;padding:0;box-sizing:border-box}
       html{scroll-behavior:smooth}
-      body{font-family:Inter,system-ui,-apple-system,sans-serif;background:#0f1729;color:#f8fafc;-webkit-font-smoothing:antialiased}
+      body{font-family:system-ui,-apple-system,sans-serif;background:#0a0a0a;color:#fff}
       #root{min-height:100vh}
       .animate-spin{animation:spin 1s linear infinite}
       @keyframes spin{to{transform:rotate(360deg)}}
-      /* Prevent FOUC */
-      .loading-hidden{visibility:hidden}
     </style>
 
-    <!-- Preload critical font -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff2" as="font" type="font/woff2" crossorigin />
-
-    <!-- Meta Pixel Code - Defer loading -->
+    <!-- Meta Pixel Code -->
     <script>
-      // Defer Facebook Pixel to not block rendering
-      window.addEventListener('load', function() {
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1168926925375245');
-        fbq('track', 'PageView');
-      });
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1168926925375245');
+      fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel Code -->
   </head>
