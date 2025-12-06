@@ -1,18 +1,19 @@
 import { useEffect, useRef } from "react";
-import result1 from "@/assets/result-1.png";
-import result2 from "@/assets/result-2.png";
-import result3 from "@/assets/result-3.jpg";
-import result4 from "@/assets/result-4.png";
-import result5 from "@/assets/result-5.png";
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.jpg";
+import testimonial3 from "@/assets/testimonial-3.jpg";
+import testimonial4 from "@/assets/testimonial-4.jpg";
+import testimonial5 from "@/assets/testimonial-5.png";
 
 const ResultsSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const results = [
-    { id: 1, image: result5 },
-    { id: 2, image: result5 },
-    { id: 3, image: result5 },
-    { id: 4, image: result5 },
+    { id: 1, image: testimonial1 },
+    { id: 2, image: testimonial2 },
+    { id: 3, image: testimonial3 },
+    { id: 4, image: testimonial4 },
+    { id: 5, image: testimonial5 },
   ];
 
   // Duplicate for infinite loop effect
