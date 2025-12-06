@@ -9,7 +9,7 @@ export const useApplyWithUtm = () => {
     const urlParams = new URLSearchParams(window.location.search);
     
     // Build InLead URL keeping all parameters
-    const inleadBaseUrl = 'https://inlead.digital/metodo-cod-afterpay';
+    const inleadBaseUrl = 'https://inlead.digital/sistema-cod-afterpay/';
     const paramsString = urlParams.toString();
     const inleadUrl = paramsString ? `${inleadBaseUrl}?${paramsString}` : inleadBaseUrl;
     
