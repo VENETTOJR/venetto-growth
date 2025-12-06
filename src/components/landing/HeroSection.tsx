@@ -12,12 +12,11 @@ const HeroSection = () => {
         <img 
           src={heroBackground} 
           alt="" 
-          className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-0 top-1/2 -translate-y-1/2 h-full w-auto max-w-none opacity-35 object-cover"
-          style={{ maskImage: 'linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%)' }}
+          className="absolute left-1/2 -translate-x-1/2 top-0 h-auto w-full min-h-full object-cover object-top opacity-50 md:w-auto md:min-w-0 md:h-full md:left-auto md:translate-x-0 md:right-0 md:object-center"
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-background/60 md:bg-gradient-to-r md:from-background md:from-30% md:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/50 to-background md:bg-gradient-to-r md:from-background md:via-background/70 md:to-transparent" />
       </div>
       
       {/* Background effects */}
