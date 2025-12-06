@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 const HeroSection = () => {
-  const scrollToForm = () => {
-    document.getElementById("apply-section")?.scrollIntoView({
-      behavior: "smooth"
-    });
+  const handleApply = () => {
+    window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
   };
   return <section className="relative min-h-screen flex items-center justify-center py-16 sm:py-20 hero-gradient overflow-hidden">
       {/* Background effects */}
@@ -36,7 +34,7 @@ const HeroSection = () => {
 
         {/* CTA Button */}
         <div className="animate-fade-up delay-300">
-          <Button variant="cta" size="xl" onClick={scrollToForm} className="group w-full sm:w-auto text-base sm:text-lg md:text-xl px-6 sm:px-10 md:px-12">
+          <Button variant="cta" size="xl" onClick={handleApply} className="group w-full sm:w-auto text-base sm:text-lg md:text-xl px-6 sm:px-10 md:px-12">
             QUERO ME APLICAR AGORA!
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </Button>

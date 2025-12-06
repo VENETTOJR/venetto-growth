@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const ObjectionSection = () => {
-  const scrollToForm = () => {
-    document.getElementById("apply-section")?.scrollIntoView({ behavior: "smooth" });
+  const handleApply = () => {
+    window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
   };
 
   return (
@@ -38,7 +38,7 @@ const ObjectionSection = () => {
             <Button 
               variant="cta" 
               size="xl" 
-              onClick={scrollToForm}
+              onClick={handleApply}
               className="group w-full sm:w-auto text-sm sm:text-base"
             >
               QUERO ME CANDIDATAR PARA A SESSÃO GRATUITA

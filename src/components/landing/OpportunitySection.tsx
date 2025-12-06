@@ -2,10 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, X, Check } from "lucide-react";
 import venettoPhoto from "@/assets/venetto-photo.jpg";
 const OpportunitySection = () => {
-  const scrollToForm = () => {
-    document.getElementById("apply-section")?.scrollIntoView({
-      behavior: "smooth"
-    });
+  const handleApply = () => {
+    window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
   };
   const problems = ["Queima oferta todo mês e não tem previsibilidade", "Trabalha muito mas o lucro não acompanha", "Perde venda por objeção de golpe", "CPA alto demais, margem apertada", "Só bota dinheiro no bolso do cliente (gestor de tráfego)", "Depende de produtor pra ganhar (afiliado)"];
   const solutions = ["Estrutura validada para lucro previsível", "Operação que dura MESES (não queima em 30 dias)", "Objeção eliminada (cliente paga DEPOIS de receber)", "Margem real de 60%+ (não margem apertada)", "Cobrança profissional (85% pagam)", "Escala sem você aparecer ou ser autoridade"];
@@ -68,7 +66,7 @@ const OpportunitySection = () => {
               Se isso faz sentido pra você, a próxima etapa é entrar pra <strong className="text-slate-900">Consultoria SISTEMA COD PRO</strong>.
             </p>
 
-            <Button variant="cta" size="xl" onClick={scrollToForm} className="group mt-4 w-full sm:w-auto text-sm sm:text-base md:text-lg px-6 sm:px-8">
+            <Button variant="cta" size="xl" onClick={handleApply} className="group mt-4 w-full sm:w-auto text-sm sm:text-base md:text-lg px-6 sm:px-8">
               QUERO ME APLICAR AGORA!
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Button>

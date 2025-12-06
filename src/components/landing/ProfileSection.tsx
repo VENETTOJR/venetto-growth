@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, AlertTriangle } from "lucide-react";
 
 const ProfileSection = () => {
-  const scrollToForm = () => {
-    document.getElementById("apply-section")?.scrollIntoView({ behavior: "smooth" });
+  const handleApply = () => {
+    window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
   };
 
   const profiles = [
@@ -51,7 +51,7 @@ const ProfileSection = () => {
           <Button 
             variant="cta" 
             size="xl" 
-            onClick={scrollToForm}
+            onClick={handleApply}
             className="group w-full sm:w-auto"
           >
             QUERO ME APLICAR AGORA!
