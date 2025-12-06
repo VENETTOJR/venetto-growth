@@ -18,7 +18,7 @@ const BenefitsSection = () => {
       icon: Target,
       emoji: "🎯",
       title: "Objeção eliminada",
-      description: "Cliente recebe, testa e SÓ DEPOIS paga. Conversão explode com Afterpay.",
+      description: "Cliente recebe, e SÓ DEPOIS paga. Conversão explode com Afterpay.",
     },
     {
       icon: BarChart3,
