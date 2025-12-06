@@ -17,7 +17,7 @@ const HeroSection = () => {
         {/* Logo */}
         <div className="mb-6 sm:mb-10 animate-fade-up">
           <div className="inline-flex items-center gap-2 sm:gap-3 bg-card/50 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-border/50">
-            <span className="text-xl sm:text-2xl font-black text-gradient">FWA</span>
+            <span className="text-xl sm:text-2xl font-black text-gradient">SISTEMA COD PRO</span>
             <span className="text-muted-foreground">|</span>
             <span className="text-base sm:text-lg font-semibold text-foreground">VENETTO</span>
           </div>
