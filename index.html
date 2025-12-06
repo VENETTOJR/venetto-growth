@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistema COD PRO</title>
+    <title>Sistema COD PRO - Estruture Operação de Nutra com COD + Afterpay | VENETTO</title>
     <meta
       name="description"
       content="Descubra como estruturar operação lucrativa de nutraceuticos com COD + Afterpay no Brasil. Margem 60%+, cobrança profissional, operação validada."
@@ -26,14 +26,27 @@
     />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <!-- DNS Prefetch -->
+    <!-- DNS Prefetch & Preconnect for fonts -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- Preload critical hero image only -->
+    <!-- Preload critical hero image -->
     <link rel="preload" as="image" href="/src/assets/venetto-hero.jpg" fetchpriority="high" />
 
     <link rel="canonical" href="https://SistemaCODPRO.com.br" />
+    
+    <!-- Critical CSS inlined for faster FCP -->
+    <style>
+      /* Critical above-the-fold styles */
+      *{margin:0;padding:0;box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{font-family:system-ui,-apple-system,sans-serif;background:#0a0a0a;color:#fff}
+      #root{min-height:100vh}
+      .animate-spin{animation:spin 1s linear infinite}
+      @keyframes spin{to{transform:rotate(360deg)}}
+    </style>
   </head>
 
   <body>
