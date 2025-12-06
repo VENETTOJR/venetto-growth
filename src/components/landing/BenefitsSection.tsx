@@ -35,35 +35,35 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 section-dark">
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 section-dark">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground px-2">
             Por que COD + Afterpay é uma{" "}
             <span className="highlight-orange">máquina de lucro</span>!
           </h2>
         </div>
 
         {/* Benefits grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className={`glass-card p-8 group hover:border-primary/50 ${
+              className={`glass-card p-5 sm:p-6 md:p-8 group hover:border-primary/50 ${
                 index === 4 ? "sm:col-span-2 lg:col-span-1" : ""
               }`}
             >
               {/* Icon */}
-              <div className="text-5xl mb-6">{benefit.emoji}</div>
+              <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">{benefit.emoji}</div>
 
               {/* Title */}
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-3 sm:mb-4">
                 {benefit.title}
               </h3>
 
               {/* Description */}
-              <p className="text-muted-foreground text-lg leading-relaxed group-hover:text-foreground/80 transition-colors">
+              <p className="text-muted-foreground text-base sm:text-lg leading-relaxed group-hover:text-foreground/80 transition-colors">
                 {benefit.description}
               </p>
             </div>

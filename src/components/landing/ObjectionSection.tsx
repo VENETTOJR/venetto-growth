@@ -7,21 +7,21 @@ const ObjectionSection = () => {
   };
 
   return (
-    <section className="py-20 px-4 section-light">
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 section-light">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-slate-100">
+        <div className="bg-white rounded-2xl shadow-xl p-5 sm:p-8 md:p-12 border border-slate-100">
           {/* Question headline */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 text-center">
             "Você vai me vender alguma coisa?"
           </h2>
 
           {/* Short answer */}
-          <p className="text-xl md:text-2xl text-primary font-semibold text-center mb-8">
+          <p className="text-lg sm:text-xl md:text-2xl text-primary font-semibold text-center mb-6 sm:mb-8">
             A resposta curta é: não, se não fizer sentido.
           </p>
 
           {/* Detailed answer */}
-          <div className="space-y-6 text-lg text-slate-600 mb-10">
+          <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-slate-600 mb-8 sm:mb-10">
             <p>
               Essa sessão estratégica é <strong className="text-slate-900">100% gratuita</strong>, feita pra identificar quem realmente pode ser ajudado com esse modelo.
             </p>
@@ -39,7 +39,7 @@ const ObjectionSection = () => {
               variant="cta" 
               size="xl" 
               onClick={scrollToForm}
-              className="group"
+              className="group w-full sm:w-auto text-sm sm:text-base"
             >
               QUERO ME CANDIDATAR PARA A SESSÃO GRATUITA
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />

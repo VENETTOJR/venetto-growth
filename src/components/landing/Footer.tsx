@@ -1,38 +1,38 @@
 const Footer = () => {
   return (
-    <footer className="py-12 px-4 section-dark border-t border-border">
+    <footer className="py-8 sm:py-12 px-4 sm:px-6 section-dark border-t border-border">
       <div className="max-w-6xl mx-auto">
         <div className="text-center">
           {/* Logo */}
-          <div className="inline-flex items-center gap-3 mb-6">
-            <span className="text-2xl font-black text-gradient">FWA</span>
+          <div className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+            <span className="text-xl sm:text-2xl font-black text-gradient">FWA</span>
             <span className="text-muted-foreground">|</span>
-            <span className="text-lg font-semibold text-foreground">VENETTO</span>
+            <span className="text-base sm:text-lg font-semibold text-foreground">VENETTO</span>
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-6 sm:mb-8">
             <a 
               href="#" 
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors"
             >
               Política de Privacidade
             </a>
             <a 
               href="#" 
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors"
             >
               Termos de Uso
             </a>
           </div>
 
           {/* Copyright */}
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground text-xs sm:text-sm">
             © 2025 Mentoria FWA - VENETTO. Todos os direitos reservados.
           </p>
 
           {/* Disclaimer */}
-          <p className="text-muted-foreground/60 text-xs mt-4 max-w-2xl mx-auto">
+          <p className="text-muted-foreground/60 text-xs mt-4 max-w-2xl mx-auto px-4">
             Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. 
             Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site.
           </p>
