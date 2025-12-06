@@ -7,6 +7,9 @@ const HeroSection = () => {
   const parallaxOffset = useParallax(0.3);
   
   const handleApply = () => {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead');
+    }
     window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
   };
   
