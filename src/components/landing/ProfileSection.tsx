@@ -50,9 +50,7 @@ const ProfileSection = () => {
           <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0">
             <AlertTriangle className="w-5 h-5 sm:w-6 sm:h-6 text-amber-600" />
           </div>
-          <p className="text-base sm:text-lg text-amber-800 font-medium mt-2">
-            Se você não se encaixa em nenhum desses cenários, essa mentoria ainda não é pra você!
-          </p>
+          <p className="text-base sm:text-lg text-amber-800 font-medium mt-2">Se você não se encaixa em nenhum desses cenários, essa consultoria ainda não é pra você!</p>
         </div>
 
         {/* CTA */}
