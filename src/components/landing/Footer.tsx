@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="py-8 sm:py-12 px-4 sm:px-6 section-dark border-t border-border">
-      <div className="max-w-6xl mx-auto">
+    <footer className="py-8 sm:py-12 section-dark border-t border-border">
+      <div className="w-[90%] max-w-6xl mx-auto">
         <div className="text-center">
           {/* Logo */}
           <div className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
@@ -32,7 +32,7 @@ const Footer = () => {
           </p>
 
           {/* Disclaimer */}
-          <p className="text-muted-foreground/60 text-xs mt-4 max-w-2xl mx-auto px-4">
+          <p className="text-muted-foreground/60 text-xs mt-4 max-w-2xl mx-auto">
             Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. 
             Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site.
           </p>

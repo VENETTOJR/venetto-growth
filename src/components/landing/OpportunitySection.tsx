@@ -25,8 +25,8 @@ const OpportunitySection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 section-light">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-12 sm:py-16 md:py-20 section-light">
+      <div className="w-[90%] max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Image placeholder */}
           <div className="relative order-2 md:order-1">
