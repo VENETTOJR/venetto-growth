@@ -35,6 +35,8 @@ const ResultsSection = () => {
                 src={result.image}
                 alt={`Resultado ${result.id}`}
                 className="w-full h-full object-cover"
+                loading="eager"
+                fetchPriority="high"
               />
             </div>
           ))}
