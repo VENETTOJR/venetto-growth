@@ -1,13 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const HeroSection = () => {
   const scrollToForm = () => {
-    document.getElementById("apply-section")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("apply-section")?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 hero-gradient overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 hero-gradient overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-20 w-64 sm:w-96 h-64 sm:h-96 bg-primary/10 rounded-full blur-3xl" />
@@ -27,7 +26,7 @@ const HeroSection = () => {
         {/* Headline */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-foreground mb-5 sm:mb-8 leading-tight animate-fade-up delay-100 px-2">
           Existe uma estrutura validada para vender produto físico com COD + Afterpay e lucrar de{" "}
-          <span className="highlight-orange">R$50.000 a R$300.000/mês</span> — e você pode começar a aplicar ainda hoje
+          <span className="highlight-orange">R$10.000 a R$90.000/mês</span> — e você pode começar a aplicar ainda hoje
         </h1>
 
         {/* Subheadline */}
@@ -37,12 +36,7 @@ const HeroSection = () => {
 
         {/* CTA Button */}
         <div className="animate-fade-up delay-300 px-4">
-          <Button 
-            variant="cta" 
-            size="xl" 
-            onClick={scrollToForm}
-            className="group w-full sm:w-auto text-base sm:text-lg md:text-xl px-6 sm:px-10 md:px-12"
-          >
+          <Button variant="cta" size="xl" onClick={scrollToForm} className="group w-full sm:w-auto text-base sm:text-lg md:text-xl px-6 sm:px-10 md:px-12">
             QUERO ME APLICAR AGORA!
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
           </Button>
@@ -52,7 +46,7 @@ const HeroSection = () => {
         <div className="mt-10 sm:mt-16 flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 text-muted-foreground text-sm sm:text-base animate-fade-up delay-400">
           <div className="flex items-center justify-center gap-2">
             <span className="text-primary text-xl sm:text-2xl">✓</span>
-            <span>+R$1.5M faturados</span>
+            <span>+R$1.5M faturados em 8 meses </span>
           </div>
           <div className="flex items-center justify-center gap-2">
             <span className="text-primary text-xl sm:text-2xl">✓</span>
@@ -64,8 +58,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
