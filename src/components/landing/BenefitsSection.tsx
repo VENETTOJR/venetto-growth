@@ -40,7 +40,7 @@ const BenefitsSection = () => {
         <ScrollReveal animation="fade-up" className="text-center mb-10 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground px-2">
             Por que COD + Afterpay é uma{" "}
-            <span className="highlight-orange">máquina de lucro</span>!
+            <span className="highlight-green">máquina de lucro</span>!
           </h2>
         </ScrollReveal>
 

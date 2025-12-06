@@ -119,7 +119,7 @@ const ResultsSection = () => {
         {/* Section header */}
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4 px-2">
-            Confira alguns dos nossos <span className="highlight-orange">resultados</span>
+            Confira alguns dos nossos <span className="highlight-green">resultados</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
             Temos uma operação enxuta que escala com previsibilidade no Brasil — com produto certo, estrutura validada e funil em Real.
