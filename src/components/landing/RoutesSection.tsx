@@ -16,7 +16,7 @@ const RoutesSection = () => {
     },
     {
       icon: Handshake,
-      title: "Afiliado/Revenda",
+      title: "Produtor (Marca propria)",
       emoji: "🤝",
       benefits: [
         "Lucra de 40% a 60%",
