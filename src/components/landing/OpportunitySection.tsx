@@ -15,7 +15,7 @@ const OpportunitySection = () => {
           {/* Image placeholder */}
           <div className="relative order-2 md:order-1">
             <div className="aspect-square max-w-sm mx-auto md:max-w-none rounded-2xl overflow-hidden shadow-2xl">
-              <img src={venettoPhoto} alt="VENETTO - Mentor" className="w-full h-full object-cover" />
+              <img alt="VENETTO - Mentor" className="w-full h-full object-cover" src="/lovable-uploads/57f2a7d1-1d94-4f3a-b40e-e5df35ff644a.jpg" />
             </div>
             {/* Decorative elements */}
             <div className="absolute -bottom-4 -right-4 w-16 sm:w-24 h-16 sm:h-24 bg-primary/20 rounded-xl -z-10" />
