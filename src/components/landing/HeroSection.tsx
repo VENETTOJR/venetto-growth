@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const HeroSection = () => {
@@ -56,18 +56,24 @@ const HeroSection = () => {
         </div>
 
         {/* Trust badges */}
-        <div className="mt-10 sm:mt-16 flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 text-muted-foreground text-sm sm:text-base animate-fade-up delay-400">
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-primary text-xl sm:text-2xl">✓</span>
-            <span>+R$1.5M faturados em 8 meses </span>
+        <div className="mt-10 sm:mt-16 flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-6 text-muted-foreground text-sm sm:text-base animate-fade-up delay-400">
+          <div className="flex items-center justify-center gap-2 bg-card/30 backdrop-blur-sm px-4 py-2 rounded-full border border-border/30 hover:border-primary/30 transition-colors">
+            <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+              <Check className="w-3 h-3 text-primary" />
+            </div>
+            <span>+R$1.5M faturados em 8 meses</span>
           </div>
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-primary text-xl sm:text-2xl">✓</span>
+          <div className="flex items-center justify-center gap-2 bg-card/30 backdrop-blur-sm px-4 py-2 rounded-full border border-border/30 hover:border-primary/30 transition-colors">
+            <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+              <Check className="w-3 h-3 text-primary" />
+            </div>
             <span>Margem 60%+</span>
           </div>
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-primary text-xl sm:text-2xl">✓</span>
-            <span>Operação validada </span>
+          <div className="flex items-center justify-center gap-2 bg-card/30 backdrop-blur-sm px-4 py-2 rounded-full border border-border/30 hover:border-primary/30 transition-colors">
+            <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
+              <Check className="w-3 h-3 text-primary" />
+            </div>
+            <span>Operação validada</span>
           </div>
         </div>
       </div>
