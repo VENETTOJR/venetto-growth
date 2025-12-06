@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 const FinalCTASection = () => {
-  const scrollToForm = () => {
-    document.getElementById("apply-section")?.scrollIntoView({ behavior: "smooth" });
+  const handleApply = () => {
+    window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
   };
 
   return (
@@ -39,7 +39,7 @@ const FinalCTASection = () => {
         {/* CTA Button */}
         <Button 
           size="xl" 
-          onClick={scrollToForm}
+          onClick={handleApply}
           className="bg-white text-primary hover:bg-white/90 font-bold text-base sm:text-lg md:text-xl px-8 sm:px-12 py-5 sm:py-6 rounded-xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 group w-full sm:w-auto"
         >
           QUERO ME APLICAR AGORA!
