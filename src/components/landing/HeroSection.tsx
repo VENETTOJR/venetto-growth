@@ -46,7 +46,7 @@ const HeroSection = () => {
             <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center">
               <Check className="w-2.5 h-2.5 text-primary" />
             </div>
-            <span>+R$1.5M faturados</span>
+            <span>+R$1.5M em 7 meses           </span>
           </div>
           <div className="flex items-center gap-2 bg-card/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-border/30">
             <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center">
