@@ -7,7 +7,7 @@ const ProfileSection = () => {
   };
 
   const profiles = [
-    "É gestor de tráfego/dono de agência e quer operação própria",
+    "Tá no CLT ou faculdade e quer virada de jogo com digital",
     "Já tentou info, mas queima oferta todo mês",
     "Vende encapsulado mas perde venda por objeção de golpe",
     "É gestor de tráfego/dono de agência e quer operação própria",
