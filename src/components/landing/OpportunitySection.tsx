@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, X, Check } from "lucide-react";
 import venettoPhoto from "@/assets/venetto-photo.jpg";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-
 const OpportunitySection = () => {
   const handleApply = () => {
     window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
@@ -18,15 +17,7 @@ const OpportunitySection = () => {
           {/* Image placeholder */}
           <ScrollReveal animation="fade-right" className="relative order-2 md:order-1">
             <div className="aspect-square max-w-sm mx-auto md:max-w-none rounded-2xl overflow-hidden shadow-2xl gradient-border bg-muted">
-              <img 
-                alt="VENETTO - Mentor especialista em COD e Afterpay" 
-                className="w-full h-full object-cover" 
-                src="/lovable-uploads/57f2a7d1-1d94-4f3a-b40e-e5df35ff644a.jpg" 
-                loading="lazy"
-                width={400}
-                height={400}
-                decoding="async"
-              />
+              <img alt="VENETTO - Mentor especialista em COD e Afterpay" className="w-full h-full object-cover" src="/lovable-uploads/57f2a7d1-1d94-4f3a-b40e-e5df35ff644a.jpg" loading="lazy" width={400} height={400} decoding="async" />
             </div>
             {/* Decorative elements */}
             <div className="absolute -bottom-4 -right-4 w-16 sm:w-24 h-16 sm:h-24 bg-primary/20 rounded-xl -z-10 float-slow" />
@@ -35,9 +26,7 @@ const OpportunitySection = () => {
 
           {/* Content */}
           <ScrollReveal animation="fade-left" delay={200} className="space-y-5 sm:space-y-6 order-1 md:order-2">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
-              Essa é a melhor oportunidade que você vai encontrar em 2025 para mudar sua vida no digital…
-            </h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 leading-tight">Essa é a melhor oportunidade que você vai encontrar em 2025 E 2026 para mudar sua vida no digital…</h2>
 
             <p className="text-base sm:text-lg text-slate-600">
               Só precisa da orientação certa e uma estratégia que já provou funcionar.
