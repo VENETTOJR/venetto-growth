@@ -54,7 +54,7 @@ const HeroSection = () => {
           </div>
           <div className="flex items-center justify-center gap-2">
             <span className="text-primary text-xl sm:text-2xl">✓</span>
-            <span>Operação validada (Venda/Cobrança/Financeiro)</span>
+            <span>Operação validada </span>
           </div>
         </div>
       </div>
