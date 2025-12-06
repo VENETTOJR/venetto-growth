@@ -23,6 +23,8 @@ const MentorSection = () => {
                 src={venettoPhoto} 
                 alt="VENETTO - Mentor"
                 className="w-full h-full object-cover"
+                loading="eager"
+                fetchPriority="high"
               />
             </div>
             {/* Decorative elements */}
