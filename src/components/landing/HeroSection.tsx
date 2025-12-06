@@ -1,12 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import heroBackground from "@/assets/hero-background.jpg";
+
 const HeroSection = () => {
   const handleApply = () => {
     window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
   };
   return <section className="relative min-h-screen flex items-center justify-center py-16 sm:py-20 hero-gradient overflow-hidden">
-      {/* Background effects */}
+      {/* Background photo with shadow overlay */}
       <div className="absolute inset-0 overflow-hidden">
+        <img 
+          src={heroBackground} 
+          alt="" 
+          className="absolute right-0 top-1/2 -translate-y-1/2 h-full w-auto max-w-none opacity-20 object-cover"
+          loading="eager"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/60" />
+      </div>
+      
+      {/* Background effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-20 w-64 sm:w-96 h-64 sm:h-96 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 -right-20 w-64 sm:w-96 h-64 sm:h-96 bg-accent/10 rounded-full blur-3xl" />
       </div>
