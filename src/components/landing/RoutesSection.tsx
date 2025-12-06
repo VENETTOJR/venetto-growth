@@ -5,7 +5,7 @@ const RoutesSection = () => {
     {
       icon: Crown,
       title: "Produto Próprio",
-      gradient: "from-primary to-orange-600",
+      gradient: "from-primary to-emerald-600",
       benefits: [
         "Lucra 100% da venda",
         "Margem máxima (60%+)",

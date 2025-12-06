@@ -130,7 +130,7 @@
     background-image: var(--cta-gradient);
   }
 
-  .highlight-orange {
+  .highlight-green {
     @apply text-primary;
   }
 
