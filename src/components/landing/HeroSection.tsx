@@ -73,7 +73,7 @@ const HeroSection = () => {
             src={venettoHero} 
             alt="VENETTO - Mentor" 
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: '50% 20%' }}
+            style={{ objectPosition: '50% 10%' }}
             loading="eager"
             fetchPriority="high"
           />
