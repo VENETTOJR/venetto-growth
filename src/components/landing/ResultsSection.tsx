@@ -4,6 +4,8 @@ import testimonial2 from "@/assets/testimonial-2.jpg";
 import testimonial3 from "@/assets/testimonial-3.jpg";
 import testimonial4 from "@/assets/testimonial-4.jpg";
 import testimonial5 from "@/assets/testimonial-5.png";
+import testimonial6 from "@/assets/testimonial-6.jpg";
+import testimonial7 from "@/assets/testimonial-7.jpg";
 
 const ResultsSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -14,6 +16,8 @@ const ResultsSection = () => {
     { id: 3, image: testimonial3 },
     { id: 4, image: testimonial4 },
     { id: 5, image: testimonial5 },
+    { id: 6, image: testimonial6 },
+    { id: 7, image: testimonial7 },
   ];
 
   // Duplicate for infinite loop effect
