@@ -12,11 +12,11 @@ const HeroSection = () => {
         <img 
           src={heroBackground} 
           alt="" 
-          className="absolute right-0 top-1/2 -translate-y-1/2 h-full w-auto max-w-none opacity-20 object-cover"
+          className="absolute right-0 top-1/2 -translate-y-1/2 h-full w-auto max-w-none opacity-40 object-cover"
           loading="eager"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/40" />
       </div>
       
       {/* Background effects */}
