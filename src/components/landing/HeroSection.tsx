@@ -68,12 +68,12 @@ const HeroSection = () => {
       {/* Full width photo at bottom */}
       <div className="relative z-10 w-full mt-8">
         {/* Photo container - full width with zoom on face */}
-        <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden">
+        <div className="relative w-full h-[350px] sm:h-[450px] md:h-[550px] overflow-hidden">
           <img 
             src={venettoHero} 
             alt="VENETTO - Mentor" 
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: '50% 15%' }}
+            style={{ objectPosition: '50% 20%' }}
             loading="eager"
             fetchPriority="high"
           />
