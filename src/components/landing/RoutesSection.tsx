@@ -19,7 +19,7 @@ const RoutesSection = () => {
       title: "Afiliado",
       emoji: "🤝",
       benefits: [
-        "Lucra de 40% a 60%",
+        "Lucra de 50% a 60%",
         "Começa com investimento menor",
         "Produto já validado",
         "Risco controlado",
