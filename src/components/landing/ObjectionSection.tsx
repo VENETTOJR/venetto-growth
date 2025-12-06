@@ -1,13 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const ObjectionSection = () => {
   const handleApply = () => {
     window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
   };
-
-  return (
-    <section className="py-12 sm:py-16 md:py-20 section-light">
+  return <section className="py-12 sm:py-16 md:py-20 section-light">
       <div className="w-[90%] max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl p-5 sm:p-8 md:p-12 border border-slate-100">
           {/* Question headline */}
@@ -35,20 +32,13 @@ const ObjectionSection = () => {
 
           {/* CTA */}
           <div className="text-center">
-            <Button 
-              variant="cta" 
-              size="xl" 
-              onClick={handleApply}
-              className="group w-full sm:w-auto text-sm sm:text-base"
-            >
-              QUERO ME CANDIDATAR PARA A SESSÃO GRATUITA
+            <Button variant="cta" size="xl" onClick={handleApply} className="group w-full sm:w-auto text-sm sm:text-base">
+              QUERO ME APLICAR 
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ObjectionSection;
