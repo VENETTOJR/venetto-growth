@@ -1,6 +1,5 @@
 const MentorSection = () => {
-  return (
-    <section className="py-12 sm:py-16 md:py-20 section-light">
+  return <section className="py-12 sm:py-16 md:py-20 section-light">
       <div className="w-[90%] max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-10 sm:mb-16">
@@ -37,17 +36,13 @@ const MentorSection = () => {
             </h3>
 
             <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-slate-600">
-              <p>
-                <strong className="text-slate-900">VENETTO</strong>, com apenas 23 anos, é o cara por trás da operação que fatura <strong className="text-primary">R$340k/mês</strong> vendendo nutraceuticos com COD + Afterpay no Brasil.
+              <p>VENETTO, com apenas 23 anos, é o cara por trás de uma operação que fatura + de  R$340k/mês vendendo nutraceuticos com COD + Afterpay no Brasil.<strong className="text-slate-900">VENETTO</strong>, com apenas 23 anos, é o cara por trás da operação que fatura <strong className="text-primary">R$340k/mês</strong> vendendo nutraceuticos com COD + Afterpay no Brasil.
               </p>
-              <p>
-                Depois de trabalhar em sorveteria e estudar muito sobre tráfego direto, ele estruturou do zero uma operação que hoje fatura <strong className="text-slate-900">6 dígitos por mês</strong> — com margem real, cobrança profissional e sem aparecer.
+              <p>Depois de trabalhar em sorveteria e estudar muito sobre tráfego pro x1, ele estruturou do zero uma operação que hoje fatura 6 dígitos por mês — com margem real, cobrança profissional e sem aparecer.<strong className="text-slate-900">6 dígitos por mês</strong> — com margem real, cobrança profissional e sem aparecer.
               </p>
-              <p>
-                Já faturou mais de <strong className="text-primary">R$1.5 milhão</strong> nos últimos 8 meses com esse modelo.
+              <p>Já faturou mais de R$1.5 milhão nos últimos 7 meses com esse modelo.<strong className="text-primary">R$1.5 milhão</strong> nos últimos 8 meses com esse modelo.
               </p>
-              <p>
-                Hoje, ele lidera a operação <strong className="text-slate-900">VH Digital</strong> e <strong className="text-slate-900">Derma Natural</strong>, vendendo nutraceuticos com estrutura leve mas altamente lucrativa.
+              <p>Hoje, ele lidera a operação vendendo nutraceuticos com estrutura leve mas altamente lucrativa.<strong className="text-slate-900">VH Digital</strong> e <strong className="text-slate-900">Derma Natural</strong>, vendendo nutraceuticos com estrutura leve mas altamente lucrativa.
               </p>
               <p className="bg-slate-100 p-3 sm:p-4 rounded-lg border-l-4 border-primary text-sm sm:text-base">
                 Agora ele decidiu abrir as portas e acompanhar um <strong className="text-slate-900">grupo restrito de pessoas</strong> para aplicar o mesmo modelo do zero, com margem, escala e operação profissional.
@@ -56,8 +51,6 @@ const MentorSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default MentorSection;
