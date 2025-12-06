@@ -1,9 +1,12 @@
 const ResultsSection = () => {
-  // Placeholder results - these would be replaced with actual screenshots
-  const results = Array.from({ length: 6 }, (_, i) => ({
-    id: i + 1,
-    label: `Resultado ${i + 1}`,
-  }));
+  const results = [
+    { id: 1, label: "R$42k em um dia", emoji: "💰" },
+    { id: 2, label: "85% taxa de cobrança", emoji: "✅" },
+    { id: 3, label: "Conversão de 9.8%", emoji: "🎯" },
+    { id: 4, label: "CPA R$47", emoji: "📉" },
+    { id: 5, label: "Operação rodando há 6 meses", emoji: "🔄" },
+    { id: 6, label: "Margem 60%+", emoji: "📈" },
+  ];
 
   return (
     <section className="py-12 sm:py-16 md:py-20 section-dark">
@@ -28,10 +31,10 @@ const ResultsSection = () => {
               <div className="w-full h-full flex items-center justify-center">
                 <div className="text-center p-3 sm:p-4">
                   <div className="w-8 h-8 sm:w-12 sm:h-12 mx-auto bg-primary/20 rounded-lg mb-2 sm:mb-3 flex items-center justify-center">
-                    <span className="text-xl sm:text-2xl">📊</span>
+                    <span className="text-xl sm:text-2xl">{result.emoji}</span>
                   </div>
-                  <span className="text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                    Dashboard de Resultados
+                  <span className="text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors font-medium">
+                    {result.label}
                   </span>
                 </div>
               </div>
