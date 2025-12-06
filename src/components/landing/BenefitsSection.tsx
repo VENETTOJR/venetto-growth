@@ -21,7 +21,7 @@ const BenefitsSection = () => {
     {
       icon: BarChart3,
       title: "Operação previsível",
-      description: "Estrutura profissional de venda e cobrança. 85% pagam. Longevidade de meses.",
+      description: "Estrutura profissional de venda e cobrança. 87% pagam. Longevidade de meses.",
     },
     {
       icon: Rocket,
