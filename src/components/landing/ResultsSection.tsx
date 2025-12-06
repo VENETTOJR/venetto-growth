@@ -1,11 +1,14 @@
+import result1 from "@/assets/result-1.png";
+import result2 from "@/assets/result-2.png";
+import result3 from "@/assets/result-3.jpg";
+import result4 from "@/assets/result-4.png";
+
 const ResultsSection = () => {
   const results = [
-    { id: 1, label: "R$42k em um dia", emoji: "💰" },
-    { id: 2, label: "85% taxa de cobrança", emoji: "✅" },
-    { id: 3, label: "Conversão de 9.8%", emoji: "🎯" },
-    { id: 4, label: "CPA R$47", emoji: "📉" },
-    { id: 5, label: "Operação rodando há 6 meses", emoji: "🔄" },
-    { id: 6, label: "Margem 60%+", emoji: "📈" },
+    { id: 1, image: result1 },
+    { id: 2, image: result2 },
+    { id: 3, image: result3 },
+    { id: 4, image: result4 },
   ];
 
   return (
@@ -22,22 +25,17 @@ const ResultsSection = () => {
         </div>
 
         {/* Results grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           {results.map((result) => (
             <div
               key={result.id}
-              className="aspect-video bg-gradient-to-br from-card to-secondary rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-border/50 group cursor-pointer"
+              className="aspect-[9/16] bg-gradient-to-br from-card to-secondary rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-border/50 group cursor-pointer"
             >
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center p-3 sm:p-4">
-                  <div className="w-8 h-8 sm:w-12 sm:h-12 mx-auto bg-primary/20 rounded-lg mb-2 sm:mb-3 flex items-center justify-center">
-                    <span className="text-xl sm:text-2xl">{result.emoji}</span>
-                  </div>
-                  <span className="text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors font-medium">
-                    {result.label}
-                  </span>
-                </div>
-              </div>
+              <img
+                src={result.image}
+                alt={`Resultado ${result.id}`}
+                className="w-full h-full object-cover"
+              />
             </div>
           ))}
         </div>
