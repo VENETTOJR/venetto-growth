@@ -43,7 +43,7 @@ const HeroSection = () => {
         </div>
 
         {/* Trust badges */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 text-muted-foreground text-xs sm:text-sm animate-fade-up delay-400 mb-8">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 text-muted-foreground text-xs sm:text-sm animate-fade-up delay-400">
           <div className="flex items-center gap-2 bg-card/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-border/30">
             <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center">
               <Check className="w-2.5 h-2.5 text-primary" />
@@ -65,23 +65,28 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Photo at bottom - full image */}
-      <div className="relative z-10 flex justify-center mt-auto">
-        <div className="relative">
-          {/* Subtle glow effect */}
-          <div className="absolute -inset-8 bg-gradient-to-t from-primary/20 to-transparent blur-3xl opacity-50" />
-          
-          {/* Photo */}
+      {/* Full width photo at bottom */}
+      <div className="relative z-10 w-full mt-8">
+        {/* Photo container - full width with zoom on face */}
+        <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden">
           <img 
             src={venettoHero} 
             alt="VENETTO - Mentor" 
-            className="relative w-72 sm:w-80 md:w-96 h-auto object-cover rounded-t-3xl shadow-2xl"
+            className="absolute inset-0 w-full h-full object-cover scale-125"
+            style={{ objectPosition: 'center 20%' }}
             loading="eager"
             fetchPriority="high"
           />
           
-          {/* Bottom fade */}
-          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent" />
+          {/* Top gradient fade */}
+          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent" />
+          
+          {/* Bottom gradient fade */}
+          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/80 to-transparent" />
+          
+          {/* Side gradients for depth */}
+          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background/50 to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background/50 to-transparent" />
         </div>
       </div>
     </section>
