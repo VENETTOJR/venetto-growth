@@ -26,23 +26,12 @@
     />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <!-- Preload images -->
-    <link rel="preload" as="image" href="/lovable-uploads/57f2a7d1-1d94-4f3a-b40e-e5df35ff644a.jpg" />
-    <link rel="preload" as="image" href="/src/assets/hero-background.jpg" />
-    <link rel="preload" as="image" href="/src/assets/venetto-hero.jpg" />
-    <link rel="preload" as="image" href="/src/assets/venetto-photo.jpg" />
-    <link rel="preload" as="image" href="/src/assets/result-1.png" />
-    <link rel="preload" as="image" href="/src/assets/result-2.png" />
-    <link rel="preload" as="image" href="/src/assets/result-3.jpg" />
-    <link rel="preload" as="image" href="/src/assets/result-4.png" />
-    <link rel="preload" as="image" href="/src/assets/result-5.png" />
-    <link rel="preload" as="image" href="/src/assets/testimonial-1.jpg" />
-    <link rel="preload" as="image" href="/src/assets/testimonial-2.jpg" />
-    <link rel="preload" as="image" href="/src/assets/testimonial-3.jpg" />
-    <link rel="preload" as="image" href="/src/assets/testimonial-4.jpg" />
-    <link rel="preload" as="image" href="/src/assets/testimonial-5.png" />
-    <link rel="preload" as="image" href="/src/assets/testimonial-6.jpg" />
-    <link rel="preload" as="image" href="/src/assets/testimonial-7.jpg" />
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    
+    <!-- Preload critical hero image only -->
+    <link rel="preload" as="image" href="/src/assets/venetto-hero.jpg" fetchpriority="high" />
 
     <link rel="canonical" href="https://SistemaCODPRO.com.br" />
   </head>
