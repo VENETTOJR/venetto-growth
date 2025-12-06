@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Shield, Clock, Users } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
+
 const FinalCTASection = () => {
   const handleApply = () => {
     if (typeof window !== 'undefined' && (window as any).fbq) {
@@ -7,71 +8,66 @@ const FinalCTASection = () => {
     }
     window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
   };
-  const trustItems = [{
-    icon: Shield,
-    text: "Sessão estratégica gratuita"
-  }, {
-    icon: Clock,
-    text: "Análise completa do seu perfil"
-  }, {
-    icon: Users,
-    text: "Modelo validado"
-  }];
-  return <section id="apply-section" className="py-16 sm:py-20 md:py-24 relative overflow-hidden" style={{
-    background: "linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(221 83% 35%) 100%)"
-  }}>
-      {/* Background effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-white/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-white/10 rounded-full blur-3xl animate-pulse" style={{
-        animationDelay: '1s'
-      }} />
-      </div>
 
-      <div className="relative z-10 w-[90%] max-w-4xl mx-auto text-center">
-        {/* Icon */}
-        <div className="inline-flex items-center justify-center w-14 h-14 sm:w-18 sm:h-18 bg-white/20 backdrop-blur-sm rounded-2xl mb-6 sm:mb-8 animate-bounce" style={{
-        animationDuration: '2s'
-      }}>
-          <Sparkles className="w-7 h-7 sm:w-9 sm:h-9 text-white" />
+  const benefits = [
+    "Sessão estratégica gratuita",
+    "Análise completa do seu perfil", 
+    "Plano personalizado de ação"
+  ];
+
+  return (
+    <section id="apply-section" className="py-16 sm:py-24 md:py-32 relative overflow-hidden bg-background">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+      
+      <div className="relative z-10 w-[90%] max-w-3xl mx-auto">
+        {/* Badge */}
+        <div className="flex justify-center mb-6">
+          <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-primary bg-primary/10 px-4 py-1.5 rounded-full border border-primary/20">
+            Vagas limitadas por semana
+          </span>
         </div>
 
         {/* Headline */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 px-2 animate-fade-up">
-          Pronto para estruturar sua operação?
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 text-center leading-tight">
+          Quer estruturar sua operação com quem já faturou{" "}
+          <span className="text-primary">R$1.5M</span> em 7 meses?
         </h2>
 
         {/* Subheadline */}
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-8 sm:mb-10 max-w-3xl mx-auto px-2 animate-fade-up" style={{
-        animationDelay: '100ms'
-      }}>
-          Clique no botão abaixo e preencha o formulário de aplicação. Vou analisar seu perfil e, se aprovado, agendamos a sessão estratégica gratuita.
+        <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10 text-center max-w-2xl mx-auto">
+          Preencha a aplicação. Se o seu perfil for aprovado, você recebe uma sessão estratégica gratuita comigo.
         </p>
 
-        {/* CTA Button */}
-        <div className="animate-fade-up" style={{
-        animationDelay: '200ms'
-      }}>
-          <Button size="xl" onClick={handleApply} className="bg-white text-primary hover:bg-white/90 font-bold text-base sm:text-lg md:text-xl px-8 sm:px-12 py-5 sm:py-6 rounded-xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 group w-full sm:w-auto">
-            PARTICIPAR DA SELEÇÃO!  
+        {/* Benefits list */}
+        <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 mb-8 sm:mb-10">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="flex items-center gap-2 text-sm sm:text-base text-foreground/80">
+              <Check className="w-4 h-4 text-primary flex-shrink-0" />
+              <span>{benefit}</span>
+            </div>
+          ))}
+        </div>
 
-            <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+        {/* CTA Button */}
+        <div className="flex justify-center">
+          <Button 
+            size="xl" 
+            onClick={handleApply} 
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base sm:text-lg px-10 sm:px-14 py-5 sm:py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 group w-full sm:w-auto"
+          >
+            QUERO PARTICIPAR
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
 
-        {/* Trust indicators */}
-        <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6 animate-fade-up" style={{
-        animationDelay: '300ms'
-      }}>
-          {trustItems.map((item, index) => {
-          const Icon = item.icon;
-          return <span key={index} className="flex items-center justify-center gap-2 text-white/90 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm sm:text-base">
-                <Icon className="w-4 h-4" />
-                {item.text}
-              </span>;
-        })}
-        </div>
+        {/* Small disclaimer */}
+        <p className="text-xs sm:text-sm text-muted-foreground text-center mt-6">
+          Não é para todo mundo. Analiso cada aplicação individualmente.
+        </p>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default FinalCTASection;
