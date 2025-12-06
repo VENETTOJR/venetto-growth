@@ -2,13 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, X, Check } from "lucide-react";
 import venettoPhoto from "@/assets/venetto-photo.jpg";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { useApplyWithUtm } from "@/hooks/useApplyWithUtm";
+
 const OpportunitySection = () => {
-  const handleApply = () => {
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Lead');
-    }
-    window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
-  };
+  const handleApply = useApplyWithUtm();
   const problems = ["Queima oferta todo mês e não tem previsibilidade", "Trabalha muito mas o lucro não acompanha", "Perde venda por objeção de golpe", "CPA alto demais, margem apertada", "Só bota dinheiro no bolso do cliente (gestor de tráfego)", "Depende de produtor pra ganhar (afiliado)"];
   const solutions = ["Estrutura validada para lucro previsível", "Operação que dura MESES (não queima em 30 dias)", "Objeção eliminada (cliente paga DEPOIS de receber)", "Margem real de 60%+ (não margem apertada)", "Cobrança profissional (85% pagam)", "Escala sem você aparecer ou ser autoridade"];
   return <section className="py-12 sm:py-16 md:py-20 section-light relative overflow-hidden">
