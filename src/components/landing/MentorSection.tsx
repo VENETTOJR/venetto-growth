@@ -14,14 +14,12 @@ const MentorSection = () => {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Photo */}
           <div className="relative order-2 md:order-1">
-            <div className="aspect-[4/5] max-w-sm mx-auto md:max-w-none bg-gradient-to-br from-slate-200 to-slate-300 rounded-2xl overflow-hidden shadow-2xl">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center p-6 sm:p-8">
-                  <div className="w-28 sm:w-40 h-28 sm:h-40 mx-auto bg-slate-400 rounded-full mb-4 sm:mb-6" />
-                  <span className="text-xl sm:text-2xl font-bold text-slate-500">VENETTO</span>
-                  <p className="text-slate-400 mt-2 text-sm sm:text-base">23 anos | Empresário Digital</p>
-                </div>
-              </div>
+            <div className="aspect-[4/5] max-w-sm mx-auto md:max-w-none rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="/lovable-uploads/38f1ae1d-3d01-42fd-be5a-2ee6014feb13.png" 
+                alt="VENETTO - Mentor"
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Decorative elements */}
             <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-20 sm:w-32 h-20 sm:h-32 bg-primary/20 rounded-xl -z-10" />
