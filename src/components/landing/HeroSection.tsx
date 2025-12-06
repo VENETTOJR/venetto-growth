@@ -1,10 +1,11 @@
+import { memo } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 import venettoHero from "@/assets/venetto-hero.jpg";
 import useParallax from "@/hooks/useParallax";
 import { useApplyWithUtm } from "@/hooks/useApplyWithUtm";
 
-const HeroSection = () => {
+const HeroSection = memo(() => {
   const parallaxOffset = useParallax(0.3);
   const handleApply = useApplyWithUtm();
   
@@ -102,5 +103,6 @@ const HeroSection = () => {
         </div>
       </div>
     </section>;
-};
+});
+HeroSection.displayName = "HeroSection";
 export default HeroSection;

@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, memo } from "react";
 import HeroSection from "@/components/landing/HeroSection";
 
 // Lazy load sections below the fold for better LCP
@@ -12,12 +12,13 @@ const MentorSection = lazy(() => import("@/components/landing/MentorSection"));
 const FinalCTASection = lazy(() => import("@/components/landing/FinalCTASection"));
 const Footer = lazy(() => import("@/components/landing/Footer"));
 
-// Minimal loading fallback
-const SectionFallback = () => (
-  <div className="py-20 flex items-center justify-center">
+// Minimal loading fallback - memoized
+const SectionFallback = memo(() => (
+  <div className="py-20 flex items-center justify-center" aria-busy="true">
     <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
   </div>
-);
+));
+SectionFallback.displayName = "SectionFallback";
 
 const Index = () => {
   return (
@@ -25,32 +26,16 @@ const Index = () => {
       {/* Hero loads immediately - critical for LCP */}
       <HeroSection />
       
-      {/* All other sections lazy loaded */}
+      {/* Group lazy loaded sections to reduce suspense boundaries */}
       <Suspense fallback={<SectionFallback />}>
         <OpportunitySection />
-      </Suspense>
-      <Suspense fallback={<SectionFallback />}>
         <RoutesSection />
-      </Suspense>
-      <Suspense fallback={<SectionFallback />}>
         <ProfileSection />
-      </Suspense>
-      <Suspense fallback={<SectionFallback />}>
         <BenefitsSection />
-      </Suspense>
-      <Suspense fallback={<SectionFallback />}>
         <ObjectionSection />
-      </Suspense>
-      <Suspense fallback={<SectionFallback />}>
         <ResultsSection />
-      </Suspense>
-      <Suspense fallback={<SectionFallback />}>
         <MentorSection />
-      </Suspense>
-      <Suspense fallback={<SectionFallback />}>
         <FinalCTASection />
-      </Suspense>
-      <Suspense fallback={<SectionFallback />}>
         <Footer />
       </Suspense>
     </main>

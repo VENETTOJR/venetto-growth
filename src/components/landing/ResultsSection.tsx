@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, memo, useCallback } from "react";
 import testimonial1 from "@/assets/testimonial-1.jpg";
 import testimonial2 from "@/assets/testimonial-2.jpg";
 import testimonial3 from "@/assets/testimonial-3.jpg";
@@ -7,7 +7,7 @@ import testimonial5 from "@/assets/testimonial-5.png";
 import testimonial6 from "@/assets/testimonial-6.jpg";
 import testimonial7 from "@/assets/testimonial-7.jpg";
 
-const ResultsSection = () => {
+const ResultsSection = memo(() => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -109,41 +109,46 @@ const ResultsSection = () => {
     };
   }, [isDragging]);
 
-  // Touch handlers for swipe
-  const handleTouchStart = (e: React.TouchEvent) => {
+  // Touch handlers for swipe - memoized
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
     setIsDragging(true);
     setStartX(e.touches[0].pageX - (scrollRef.current?.offsetLeft || 0));
     setScrollLeft(scrollRef.current?.scrollLeft || 0);
-  };
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging || !scrollRef.current) return;
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    if (!scrollRef.current) return;
     const x = e.touches[0].pageX - (scrollRef.current.offsetLeft || 0);
     const walk = (x - startX) * 1.5;
     scrollRef.current.scrollLeft = scrollLeft - walk;
-  };
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-  };
+  }, [startX, scrollLeft]);
 
-  // Mouse handlers for drag (desktop)
-  const handleMouseDown = (e: React.MouseEvent) => {
+  const handleTouchEnd = useCallback(() => {
+    setIsDragging(false);
+  }, []);
+
+  // Mouse handlers for drag (desktop) - memoized
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
     setIsDragging(true);
     setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0));
     setScrollLeft(scrollRef.current?.scrollLeft || 0);
-  };
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !scrollRef.current) return;
+  }, []);
+
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    if (!scrollRef.current) return;
     e.preventDefault();
     const x = e.pageX - (scrollRef.current.offsetLeft || 0);
     const walk = (x - startX) * 1.5;
     scrollRef.current.scrollLeft = scrollLeft - walk;
-  };
-  const handleMouseUp = () => {
+  }, [startX, scrollLeft]);
+
+  const handleMouseUp = useCallback(() => {
     setIsDragging(false);
-  };
-  const handleMouseLeave = () => {
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
     setIsDragging(false);
-  };
+  }, []);
   return <section ref={sectionRef} className="py-12 sm:py-16 md:py-20 section-dark overflow-hidden">
       <div className="w-[90%] max-w-6xl mx-auto">
         {/* Section header */}
@@ -191,5 +196,6 @@ const ResultsSection = () => {
         </div>
       </div>
     </section>;
-};
+});
+ResultsSection.displayName = "ResultsSection";
 export default ResultsSection;
