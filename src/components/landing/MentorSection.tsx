@@ -75,7 +75,7 @@ const MentorSection = () => {
               <li className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-slate-700">
-                  Processo de cobrança que converte <strong className="text-slate-900">85%</strong> dos clientes
+                  Processo de cobrança que converte <strong className="text-slate-900">87%</strong> dos clientes
                 </span>
               </li>
               <li className="flex items-start gap-3">

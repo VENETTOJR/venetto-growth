@@ -7,7 +7,7 @@ import { useApplyWithUtm } from "@/hooks/useApplyWithUtm";
 const OpportunitySection = () => {
   const handleApply = useApplyWithUtm();
   const problems = ["Queima oferta todo mês e não tem previsibilidade", "Trabalha muito mas o lucro não acompanha", "Perde venda por objeção de golpe", "CPA alto demais, margem apertada", "Só bota dinheiro no bolso do cliente (gestor de tráfego)", "Depende de produtor pra ganhar (afiliado)"];
-  const solutions = ["Estrutura validada para lucro previsível", "Operação que dura MESES (não queima em 30 dias)", "Objeção eliminada (cliente paga DEPOIS de receber)", "Margem real de 60%+ (não margem apertada)", "Cobrança profissional (85% pagam)", "Escala sem você aparecer ou ser autoridade"];
+  const solutions = ["Estrutura validada para lucro previsível", "Operação que dura MESES (não queima em 30 dias)", "Objeção eliminada (cliente paga DEPOIS de receber)", "Margem real de 60%+ (não margem apertada)", "Cobrança profissional (87% pagam)", "Escala sem você aparecer ou ser autoridade"];
   return <section className="py-12 sm:py-16 md:py-20 section-light relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
