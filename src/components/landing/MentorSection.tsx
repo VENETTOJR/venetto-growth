@@ -1,3 +1,5 @@
+import venettoPhoto from "@/assets/venetto-photo.jpg";
+
 const MentorSection = () => {
   return <section className="py-12 sm:py-16 md:py-20 section-light">
       <div className="w-[90%] max-w-6xl mx-auto">
@@ -16,7 +18,7 @@ const MentorSection = () => {
           <div className="relative order-2 md:order-1">
             <div className="aspect-[4/5] max-w-sm mx-auto md:max-w-none rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/lovable-uploads/38f1ae1d-3d01-42fd-be5a-2ee6014feb13.png" 
+                src={venettoPhoto} 
                 alt="VENETTO - Mentor"
                 className="w-full h-full object-cover"
               />
