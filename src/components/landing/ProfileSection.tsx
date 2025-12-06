@@ -1,12 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, AlertTriangle, User, Briefcase, TrendingUp, Building, Users, Rocket } from "lucide-react";
+import { useApplyWithUtm } from "@/hooks/useApplyWithUtm";
+
 const ProfileSection = () => {
-  const handleApply = () => {
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Lead');
-    }
-    window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
-  };
+  const handleApply = useApplyWithUtm();
   const profiles = [{
     icon: User,
     text: "Tá no CLT ou faculdade e quer virada de jogo com digital"

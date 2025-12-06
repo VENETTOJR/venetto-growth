@@ -1,13 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
+import { useApplyWithUtm } from "@/hooks/useApplyWithUtm";
 
 const FinalCTASection = () => {
-  const handleApply = () => {
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Lead');
-    }
-    window.open("https://inlead.digital/metodo-cod-afterpay", "_blank");
-  };
+  const handleApply = useApplyWithUtm();
 
   const benefits = [
     "Sessão estratégica gratuita",
