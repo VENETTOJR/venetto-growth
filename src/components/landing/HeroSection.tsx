@@ -72,8 +72,8 @@ const HeroSection = () => {
           <img 
             src={venettoHero} 
             alt="VENETTO - Mentor" 
-            className="absolute inset-0 w-full h-full object-cover scale-110"
-            style={{ objectPosition: '65% 25%' }}
+            className="absolute inset-0 w-full h-full object-cover scale-125"
+            style={{ objectPosition: '65% 0%' }}
             loading="eager"
             fetchPriority="high"
           />
