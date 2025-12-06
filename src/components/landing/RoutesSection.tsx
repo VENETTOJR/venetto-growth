@@ -29,36 +29,36 @@ const RoutesSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 section-dark">
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 section-dark">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 px-2">
             Você pode ter operação lucrativa seguindo uma dessas rotas — e eu posso te ajudar nas duas:
           </h2>
         </div>
 
         {/* Cards grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           {routes.map((route, index) => (
             <div
               key={index}
-              className="glass-card p-8 md:p-10 hover:border-primary/50 group"
+              className="glass-card p-5 sm:p-6 md:p-8 lg:p-10 hover:border-primary/50 group"
             >
               {/* Icon and title */}
-              <div className="flex items-center gap-4 mb-8">
-                <span className="text-4xl">{route.emoji}</span>
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+              <div className="flex items-center gap-3 sm:gap-4 mb-5 sm:mb-8">
+                <span className="text-3xl sm:text-4xl">{route.emoji}</span>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
                   {route.title}
                 </h3>
               </div>
 
               {/* Benefits list */}
-              <ul className="space-y-4">
+              <ul className="space-y-3 sm:space-y-4">
                 {route.benefits.map((benefit, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-lg text-muted-foreground group-hover:text-foreground transition-colors">
+                  <li key={idx} className="flex items-start gap-2 sm:gap-3">
+                    <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-base sm:text-lg text-muted-foreground group-hover:text-foreground transition-colors">
                       {benefit}
                     </span>
                   </li>
