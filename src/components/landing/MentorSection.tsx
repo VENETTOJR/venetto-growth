@@ -42,7 +42,7 @@ const MentorSection = () => {
         {/* Bio */}
         <div className="space-y-4 sm:space-y-5 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
           <p>
-            <strong className="text-slate-900">VENETTO</strong>, com apenas 23 anos, é o cara por trás da operação que fatura{" "}
+            <strong className="text-slate-900">VENETTO</strong>, com apenas 22 anos, é o cara por trás da operação que fatura{" "}
             <strong className="text-primary">mais de R$200k/mês</strong> vendendo nutraceuticos com COD + Afterpay no Brasil.
           </p>
           
