@@ -17,8 +17,16 @@ const OpportunitySection = () => {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Image placeholder */}
           <ScrollReveal animation="fade-right" className="relative order-2 md:order-1">
-            <div className="aspect-square max-w-sm mx-auto md:max-w-none rounded-2xl overflow-hidden shadow-2xl gradient-border">
-              <img alt="VENETTO - Mentor" className="w-full h-full object-cover" src="/lovable-uploads/57f2a7d1-1d94-4f3a-b40e-e5df35ff644a.jpg" loading="eager" fetchPriority="high" />
+            <div className="aspect-square max-w-sm mx-auto md:max-w-none rounded-2xl overflow-hidden shadow-2xl gradient-border bg-muted">
+              <img 
+                alt="VENETTO - Mentor especialista em COD e Afterpay" 
+                className="w-full h-full object-cover" 
+                src="/lovable-uploads/57f2a7d1-1d94-4f3a-b40e-e5df35ff644a.jpg" 
+                loading="lazy"
+                width={400}
+                height={400}
+                decoding="async"
+              />
             </div>
             {/* Decorative elements */}
             <div className="absolute -bottom-4 -right-4 w-16 sm:w-24 h-16 sm:h-24 bg-primary/20 rounded-xl -z-10 float-slow" />
