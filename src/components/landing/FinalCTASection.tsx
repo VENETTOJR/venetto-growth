@@ -6,13 +6,13 @@ const FinalCTASection = () => {
   };
   const trustItems = [{
     icon: Shield,
-    text: "100% gratuito"
+    text: "Sessão estratégica gratuita"
   }, {
     icon: Clock,
-    text: "Sem compromisso"
+    text: "Análise completa do seu perfil"
   }, {
     icon: Users,
-    text: "Vagas limitadas"
+    text: "Modelo validado"
   }];
   return <section id="apply-section" className="py-16 sm:py-20 md:py-24 relative overflow-hidden" style={{
     background: "linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(221 83% 35%) 100%)"
