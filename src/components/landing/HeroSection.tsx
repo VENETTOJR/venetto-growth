@@ -73,13 +73,13 @@ const HeroSection = () => {
             src={venettoHero} 
             alt="VENETTO - Mentor" 
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: '50% 25%' }}
+            style={{ objectPosition: '50% 35%' }}
             loading="eager"
             fetchPriority="high"
           />
           
           {/* Top gradient fade */}
-          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background to-transparent" />
+          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-background to-transparent" />
           
           {/* Bottom gradient fade */}
           <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/80 to-transparent" />
