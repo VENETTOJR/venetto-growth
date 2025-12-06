@@ -15,21 +15,18 @@ const MentorSection = () => {
           </h2>
         </div>
 
-        {/* Photo - Now at the top, centered */}
+        {/* Photo - Full width on mobile */}
         <div className="flex justify-center mb-10 sm:mb-12">
-          <div className="relative">
-            <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-xl">
+          <div className="w-full max-w-md sm:max-w-lg md:max-w-xl">
+            <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
               <img 
                 src={venettoPhoto} 
                 alt="VENETTO - Mentor"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 loading="eager"
                 fetchPriority="high"
               />
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -bottom-3 -right-3 w-16 sm:w-20 h-16 sm:h-20 bg-primary/20 rounded-xl -z-10" />
-            <div className="absolute -top-3 -left-3 w-12 sm:w-16 h-12 sm:h-16 bg-accent/20 rounded-xl -z-10" />
           </div>
         </div>
 
