@@ -4,7 +4,7 @@ const RoutesSection = () => {
   const routes = [
     {
       icon: Pill,
-      title: "Operação Própria",
+      title: "Poduto Proprio",
       emoji: "💊",
       benefits: [
         "Lucra 100% da venda",
