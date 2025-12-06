@@ -6,7 +6,7 @@ const BenefitsSection = () => {
     {
       icon: TrendingUp,
       title: "Mercado Nutra é gigante",
-      description: "O setor de nutraceuticos não para de crescer — bilhões movimentados no Brasil todos os anos.",
+      description: "Setor de nutraceuticos movimenta R$8 bilhões/ano no Brasil com crescimento de 15% ao ano. Demanda alta, margens reais e produtos de recompra constante.",
     },
     {
       icon: Wallet,
