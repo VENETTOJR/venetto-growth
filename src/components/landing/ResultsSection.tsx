@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import testimonial1 from "@/assets/testimonial-1.jpg";
 import testimonial2 from "@/assets/testimonial-2.jpg";
 import testimonial3 from "@/assets/testimonial-3.jpg";
@@ -9,6 +9,9 @@ import testimonial7 from "@/assets/testimonial-7.jpg";
 
 const ResultsSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   const results = [
     { id: 1, image: testimonial1 },
@@ -28,10 +31,16 @@ const ResultsSection = () => {
     if (!scrollContainer) return;
 
     let animationId: number;
-    let scrollPos = 0;
+    let scrollPos = scrollContainer.scrollLeft;
     const speed = 0.5;
+    let isAnimating = true;
 
     const animate = () => {
+      if (!isAnimating || isDragging) {
+        animationId = requestAnimationFrame(animate);
+        return;
+      }
+      
       scrollPos += speed;
       
       // Reset position for infinite loop
@@ -46,10 +55,13 @@ const ResultsSection = () => {
 
     animationId = requestAnimationFrame(animate);
 
-    // Pause on hover
-    const handleMouseEnter = () => cancelAnimationFrame(animationId);
-    const handleMouseLeave = () => {
-      animationId = requestAnimationFrame(animate);
+    // Pause on hover (desktop)
+    const handleMouseEnter = () => { isAnimating = false; };
+    const handleMouseLeave = () => { 
+      if (!isDragging) {
+        scrollPos = scrollContainer.scrollLeft;
+        isAnimating = true; 
+      }
     };
 
     scrollContainer.addEventListener("mouseenter", handleMouseEnter);
@@ -60,7 +72,48 @@ const ResultsSection = () => {
       scrollContainer.removeEventListener("mouseenter", handleMouseEnter);
       scrollContainer.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, []);
+  }, [isDragging]);
+
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX - (scrollRef.current?.offsetLeft || 0));
+    setScrollLeft(scrollRef.current?.scrollLeft || 0);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging || !scrollRef.current) return;
+    const x = e.touches[0].pageX - (scrollRef.current.offsetLeft || 0);
+    const walk = (x - startX) * 1.5;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
+  // Mouse handlers for drag (desktop)
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0));
+    setScrollLeft(scrollRef.current?.scrollLeft || 0);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - (scrollRef.current.offsetLeft || 0);
+    const walk = (x - startX) * 1.5;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
 
   return (
     <section className="py-12 sm:py-16 md:py-20 section-dark overflow-hidden">
@@ -76,22 +129,30 @@ const ResultsSection = () => {
         </div>
       </div>
 
-      {/* Infinite scroll carousel */}
+      {/* Swipeable carousel */}
       <div 
         ref={scrollRef}
-        className="flex gap-4 overflow-hidden cursor-grab active:cursor-grabbing"
-        style={{ scrollBehavior: 'auto' }}
+        className="flex gap-4 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing select-none"
+        style={{ scrollBehavior: isDragging ? 'auto' : 'smooth', WebkitOverflowScrolling: 'touch' }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
       >
         {duplicatedResults.map((result, index) => (
           <div
             key={`${result.id}-${index}`}
-            className="flex-shrink-0 w-[200px] sm:w-[250px] md:w-[280px] aspect-[9/16] bg-gradient-to-br from-card to-secondary rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border border-border/50"
+            className="flex-shrink-0 w-[200px] sm:w-[250px] md:w-[280px] aspect-[9/16] bg-gradient-to-br from-card to-secondary rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50"
           >
             <img
               src={result.image}
               alt={`Resultado ${result.id}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover pointer-events-none"
               loading="eager"
+              draggable={false}
             />
           </div>
         ))}
