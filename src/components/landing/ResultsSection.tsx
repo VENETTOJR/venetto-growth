@@ -132,9 +132,23 @@ const ResultsSection = () => {
       scrollBehavior: isDragging ? 'auto' : 'smooth',
       WebkitOverflowScrolling: 'touch'
     }} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} onMouseLeave={handleMouseLeave}>
-        {duplicatedResults.map((result, index) => <div key={`${result.id}-${index}`} className="flex-shrink-0 w-[200px] sm:w-[250px] md:w-[280px] aspect-[9/16] bg-gradient-to-br from-card to-secondary rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50">
-            <img src={result.image} alt={`Resultado ${result.id}`} className="w-full h-full object-cover pointer-events-none" loading="eager" draggable={false} />
-          </div>)}
+        {duplicatedResults.map((result, index) => (
+          <div 
+            key={`${result.id}-${index}`} 
+            className="flex-shrink-0 w-[200px] sm:w-[250px] md:w-[280px] aspect-[9/16] bg-gradient-to-br from-card to-secondary rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50"
+          >
+            <img 
+              src={result.image} 
+              alt={`Resultado e depoimento de cliente ${result.id}`} 
+              className="w-full h-full object-cover pointer-events-none" 
+              loading="lazy"
+              width={280}
+              height={498}
+              decoding="async"
+              draggable={false} 
+            />
+          </div>
+        ))}
       </div>
 
       <div className="w-[90%] max-w-6xl mx-auto">

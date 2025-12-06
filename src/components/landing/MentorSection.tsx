@@ -18,13 +18,15 @@ const MentorSection = () => {
         {/* Photo - Full width on mobile */}
         <div className="flex justify-center mb-10 sm:mb-12">
           <div className="w-full max-w-md sm:max-w-lg md:max-w-xl">
-            <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+            <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl bg-muted">
               <img 
                 src={venettoPhoto} 
-                alt="VENETTO - Mentor"
+                alt="VENETTO - Mentor especialista em nutraceuticos e COD"
                 className="w-full h-full object-cover object-top"
-                loading="eager"
-                fetchPriority="high"
+                loading="lazy"
+                width={576}
+                height={768}
+                decoding="async"
               />
             </div>
           </div>

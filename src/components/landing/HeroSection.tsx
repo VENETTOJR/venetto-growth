@@ -80,9 +80,17 @@ const HeroSection = () => {
       <div className="relative z-10 w-full mt-8">
         {/* Photo container - full width with zoom on face */}
         <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden">
-          <img src={venettoHero} alt="VENETTO - Mentor" className="absolute inset-0 w-full h-full object-cover scale-110" style={{
-          objectPosition: '50% 20%'
-        }} loading="eager" fetchPriority="high" />
+          <img 
+            src={venettoHero} 
+            alt="VENETTO - Mentor especialista em COD e Afterpay" 
+            className="absolute inset-0 w-full h-full object-cover scale-110" 
+            style={{ objectPosition: '50% 20%' }} 
+            loading="eager" 
+            fetchPriority="high"
+            width={1200}
+            height={600}
+            decoding="async"
+          />
           
           {/* Top gradient fade */}
           <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-background to-transparent" />
