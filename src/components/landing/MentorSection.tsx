@@ -47,7 +47,7 @@ const MentorSection = () => {
           </p>
           
           <p>
-            Depois de trabalhar em sorveteria e estudar muito sobre tráfego direto e e-commerce, ele estruturou do zero uma operação que hoje fatura{" "}
+            Depois de trabalhar em sorveteria e estudar muito sobre ofertas, funis de venda X1, tráfego e escala, ele estruturou do zero uma operação que hoje fatura{" "}
             <strong className="text-slate-900">6 dígitos por mês</strong> — com margem real, cobrança profissional e sem aparecer.
           </p>
           
@@ -58,8 +58,7 @@ const MentorSection = () => {
           </p>
           
           <p>
-            Hoje, ele lidera a operação <strong className="text-slate-900">VH Digital</strong> e{" "}
-            <strong className="text-slate-900">Derma Natural</strong>, vendendo nutraceuticos com estrutura enxuta mas altamente lucrativa — operando com COD + Afterpay que elimina objeção e aumenta conversão.
+            Hoje, ele lidera uma operação vendendo nutraceuticos com estrutura enxuta mas altamente lucrativa — operando com COD + Afterpay que elimina objeção e aumenta conversão.
           </p>
 
           {/* Secret Box */}
