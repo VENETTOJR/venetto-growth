@@ -22,7 +22,7 @@ const MentorSection = () => {
               <img 
                 src={venettoPhoto} 
                 alt="VENETTO - Mentor especialista em nutraceuticos e COD"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-center"
                 loading="lazy"
                 width={576}
                 height={768}
