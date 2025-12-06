@@ -6,11 +6,14 @@ import testimonial4 from "@/assets/testimonial-4.jpg";
 import testimonial5 from "@/assets/testimonial-5.png";
 import testimonial6 from "@/assets/testimonial-6.jpg";
 import testimonial7 from "@/assets/testimonial-7.jpg";
+
 const ResultsSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [hasTrackedView, setHasTrackedView] = useState(false);
   const results = [{
     id: 1,
     image: testimonial1
@@ -34,8 +37,35 @@ const ResultsSection = () => {
     image: testimonial7
   }];
 
+  // Track ViewContent when section becomes visible
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section || hasTrackedView) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasTrackedView) {
+            if (typeof window !== 'undefined' && (window as any).fbq) {
+              (window as any).fbq('track', 'ViewContent', {
+                content_name: 'Results Section',
+                content_category: 'Landing Page'
+              });
+            }
+            setHasTrackedView(true);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, [hasTrackedView]);
+
   // Duplicate for infinite loop effect
   const duplicatedResults = [...results, ...results, ...results];
+  
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
@@ -114,7 +144,7 @@ const ResultsSection = () => {
   const handleMouseLeave = () => {
     setIsDragging(false);
   };
-  return <section className="py-12 sm:py-16 md:py-20 section-dark overflow-hidden">
+  return <section ref={sectionRef} className="py-12 sm:py-16 md:py-20 section-dark overflow-hidden">
       <div className="w-[90%] max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-8 sm:mb-12">
