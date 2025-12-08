@@ -87,7 +87,7 @@ const HeroSection = () => {
             fetchPriority="high"
             width={1200}
             height={600}
-            decoding="async"
+            decoding="sync"
           />
           
           {/* Top gradient fade */}
