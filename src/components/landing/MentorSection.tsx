@@ -27,6 +27,7 @@ const MentorSection = () => {
                 width={576}
                 height={768}
                 decoding="async"
+                fetchPriority="low"
               />
             </div>
           </div>
