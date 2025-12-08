@@ -27,40 +27,40 @@
     />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <!-- DNS Prefetch & Preconnect for fonts -->
+    <!-- DNS Prefetch & Preconnect -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//connect.facebook.net" />
+    <link rel="dns-prefetch" href="//www.facebook.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Preload critical hero image -->
-    <link rel="preload" as="image" href="/src/assets/venetto-hero.jpg" fetchpriority="high" />
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
 
-    <link rel="canonical" href="https://SistemaCODPRO.com.br" />
     
-    <!-- Critical CSS inlined for faster FCP -->
-    <style>
-      /* Critical above-the-fold styles */
-      *{margin:0;padding:0;box-sizing:border-box}
-      html{scroll-behavior:smooth}
-      body{font-family:system-ui,-apple-system,sans-serif;background:#0a0a0a;color:#fff}
-      #root{min-height:100vh}
-      .animate-spin{animation:spin 1s linear infinite}
-      @keyframes spin{to{transform:rotate(360deg)}}
-    </style>
-
-    <!-- Meta Pixel Code -->
+    
+    <!-- Meta Pixel Code - Deferred for better LCP -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1168926925375245');
-      fbq('track', 'PageView');
+      // Load Facebook Pixel after page is interactive
+      function loadFBPixel() {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1168926925375245');
+        fbq('track', 'PageView');
+      }
+      // Load after DOM is ready and page has painted
+      if (document.readyState === 'complete') {
+        setTimeout(loadFBPixel, 100);
+      } else {
+        window.addEventListener('load', function() {
+          setTimeout(loadFBPixel, 100);
+        });
+      }
     </script>
     <!-- End Meta Pixel Code -->
   </head>

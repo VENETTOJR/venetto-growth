@@ -165,7 +165,7 @@ const ResultsSection = () => {
         {duplicatedResults.map((result, index) => (
           <div 
             key={`${result.id}-${index}`} 
-            className="flex-shrink-0 w-[200px] sm:w-[250px] md:w-[280px] aspect-[9/16] bg-gradient-to-br from-card to-secondary rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50"
+            className="flex-shrink-0 w-[200px] sm:w-[250px] md:w-[280px] aspect-[9/16] bg-card rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50"
           >
             <img 
               src={result.image} 
@@ -175,6 +175,7 @@ const ResultsSection = () => {
               width={280}
               height={498}
               decoding="async"
+              fetchPriority="low"
               draggable={false} 
             />
           </div>
