@@ -13,8 +13,8 @@ export const useApplyWithUtm = () => {
     const paramsString = urlParams.toString();
     const formUrl = paramsString ? `${formBaseUrl}?${paramsString}` : formBaseUrl;
     
-    // Open with UTMs
-    window.open(formUrl, "_blank");
+    // Redirect with UTMs (same tab for better tracking)
+    window.location.href = formUrl;
   };
 
   return handleApply;
