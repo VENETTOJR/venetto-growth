@@ -8,13 +8,13 @@ export const useApplyWithUtm = () => {
     // Capture all URL parameters (including Facebook UTMs)
     const urlParams = new URLSearchParams(window.location.search);
     
-    // Build InLead URL keeping all parameters
-    const inleadBaseUrl = 'https://inlead.digital/sistema-cod-afterpay/';
+    // Build form URL keeping all parameters
+    const formBaseUrl = 'https://forms.victorvenetto.com.br/quiz/sistemacodpro';
     const paramsString = urlParams.toString();
-    const inleadUrl = paramsString ? `${inleadBaseUrl}?${paramsString}` : inleadBaseUrl;
+    const formUrl = paramsString ? `${formBaseUrl}?${paramsString}` : formBaseUrl;
     
     // Open with UTMs
-    window.open(inleadUrl, "_blank");
+    window.open(formUrl, "_blank");
   };
 
   return handleApply;
